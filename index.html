@@ -568,17 +568,8 @@ $(document).ready(function () {
         const _cachedLoc = localStorage.getItem('lastDeviceLocation');
         const _cachedTime = parseInt(localStorage.getItem('lastLocationTime') || '0');
         const deviceLocation = (_cachedLoc && (Date.now() - _cachedTime < 300000)) ? _cachedLoc : null;
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (p) => {
-                    const loc = `${p.coords.latitude.toFixed(6)},${p.coords.longitude.toFixed(6)}`;
-                    localStorage.setItem('lastDeviceLocation', loc);
-                    localStorage.setItem('lastLocationTime', String(Date.now()));
-                },
-                () => {},
-                { timeout: 5000, maximumAge: 60000 }
-            );
-        }
+        // Do not request browser geolocation automatically. The backend does not
+        // require it, and the permission prompt is disruptive for chat usage.
 
         if (shouldSpeak) {
             _ttsQueueClear();
