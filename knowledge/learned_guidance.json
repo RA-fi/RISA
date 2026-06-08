@@ -1,0 +1,92 @@
+{
+  "topics": [
+    {
+      "id": "learned-30f92049e6",
+      "title": "Learned support pattern",
+      "keywords": [
+        "during",
+        "exact",
+        "expresses",
+        "immediate",
+        "intent",
+        "patient",
+        "protocol",
+        "session",
+        "standard",
+        "suicidal"
+      ],
+      "core_guidance": [
+        "When you express immediate suicidal intent, my primary concern is your safety.",
+        "I want you to know that I'm here to support you, but I'm not a substitute for emergency services.",
+        "If you're in immediate danger, please call emergency services, such as 999, for help."
+      ],
+      "support_steps": [
+        "I strongly encourage you to reach out to someone nearby, a trusted friend, family member, or a mental health professional, and let them know how you're feeling."
+      ],
+      "samples": 1,
+      "updated_at": 1779579383,
+      "source": "conversation"
+    },
+    {
+      "id": "learned-de8ba7bee7",
+      "title": "Learned support pattern",
+      "keywords": [
+        "feeling",
+        "heard",
+        "judged",
+        "provider",
+        "respected",
+        "safe",
+        "without"
+      ],
+      "core_guidance": [
+        "It's completely normal to wonder if you feel safe, heard, and respected by your provider.",
+        "Feeling judged can be a huge barrier to opening up and being honest about your struggles.",
+        "I want you to know that I'm here to listen without judgment, and I care about your well-being."
+      ],
+      "support_steps": [
+        "Feeling judged can be a huge barrier to opening up and being honest about your struggles."
+      ],
+      "samples": 1,
+      "updated_at": 1779579480,
+      "source": "conversation"
+    },
+    {
+      "id": "learned-abe6103ef0",
+      "title": "Learned support pattern",
+      "keywords": [
+        "different",
+        "things",
+        "worried"
+      ],
+      "core_guidance": [
+        "বিভিন্ন বিষয় নিয়ে চিন্তিত হওয়া স্বাভাবিক। আমরা সবাই কখনো না কখনো এরকম অনুভব করি। কিন্তু আপনি এখন কেমন অনুভব করছেন?",
+        "আপনি কি কিছু বিষয় নিয়ে বিশেষ করে চিন্তিত?"
+      ],
+      "support_steps": [
+        "আপনার মনে কি চলছে?"
+      ],
+      "samples": 1,
+      "updated_at": 1779583316,
+      "source": "conversation"
+    },
+    {
+      "id": "learned-198975399a",
+      "title": "Learned support pattern",
+      "keywords": [
+        "dosage",
+        "should",
+        "take",
+        "time",
+        "years"
+      ],
+      "core_guidance": [
+        "তোমার বয়স ২৪, এই বয়সে সাধারণত ঠান্ডা লাগলে একটু প্যারাসিটামল বা সিট্রিজিন খেতে পারো। প্যারাসিটামলের জন্য একটু পানি দিয়ে একটি ট্যাবলেট খেয়ে নিতে পারো, আর সিট্রিজিনের জন্য দিনে দুইবার একটি ট্যাবলেট খেতে পারো। কিন্তু মন"
+      ],
+      "support_steps": [],
+      "samples": 1,
+      "updated_at": 1779685800,
+      "source": "conversation"
+    }
+  ]
+}

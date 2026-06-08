@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile token_optimizer.py)",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('/Users/rafiuzzaman/Desktop/Iasis AI/Risa/backend.py'\\).read\\(\\)\\); print\\('Syntax OK'\\)\")",
+      "Bash(python scripts/expand_knowledge_b6.py)",
+      "Bash(python scripts/expand_knowledge_b7.py)"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile backend.py)",
+      "Bash(python -c \"import edge_tts; print\\('edge-tts OK:', edge_tts.__version__ if hasattr\\(edge_tts,'__version__'\\) else 'installed'\\)\")"
+    ]
+  }
+}

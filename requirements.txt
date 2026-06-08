@@ -1,0 +1,47 @@
+# Core Web Framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+starlette>=0.41.0
+
+# HTTP Client
+httpx>=0.26.0
+
+# Environment & Configuration
+python-dotenv>=1.0.0
+
+# AI & LangChain
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-groq>=0.1.0
+langchain-community>=0.0.10
+openai>=1.7.0
+
+# Vector Database (with default ONNX embeddings; OpenAI embeddings used when OPENAI_API_KEY is set)
+chromadb[default]>=0.4.24
+onnxruntime>=1.16.0
+tokenizers>=0.15.0
+
+# Search Tools
+arxiv>=2.3.0
+wikipedia>=1.4.0
+duckduckgo-search>=4.0.0
+
+# Translation & Language Detection
+deep-translator>=1.11.4
+langdetect>=1.0.9
+
+# Data Validation
+pydantic>=2.5.0
+
+# Neural TTS (Microsoft Edge voices — free, no API key, natural Bangla/multilingual)
+edge-tts>=6.1.9
+
+# Local STT — faster-whisper (runs OpenAI Whisper on your server, free, no API key)
+faster-whisper>=1.0.0
+
+# Graph-RAG — entity knowledge graph over conversation history
+networkx>=3.0
+
+# Model Context Protocol server SDK
+mcp>=1.0.0
