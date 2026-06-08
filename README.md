@@ -417,6 +417,18 @@ Open **http://localhost:8000** — RISA is ready.
 docker compose up -d --build
 ```
 
+### Railway
+
+Railway can deploy this repository directly from Git. The included `railway.toml` starts the app with:
+
+```bash
+uvicorn backend:app --host 0.0.0.0 --port $PORT --workers 1
+```
+
+Set `GROQ_API_KEY` in Railway and, if needed, add any other environment variables from the configuration table below.
+
+If you want chat/session/profile persistence across deploys, add a Railway volume and mount it to the project `chroma_db/` directory.
+
 ---
 
 ## Configuration

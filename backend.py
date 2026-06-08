@@ -105,6 +105,18 @@ except Exception:
             return text
 
 
+def _resolve_groq_api_key() -> str:
+    for env_name in (
+        "GROQ_API_KEY",
+        "GROQ_API_KEY_FALLBACK_1",
+        "GROQ_API_KEY_FALLBACK_2",
+    ):
+        value = os.getenv(env_name, "").strip()
+        if value:
+            return value
+    raise ValueError("No GROQ API key found in environment variables")
+
+
 # Load environment variables unless explicitly disabled (e.g., in tests)
 if not os.getenv("DONT_LOAD_DOTENV") and not os.getenv("PYTEST_CURRENT_TEST"):
     try:
@@ -818,9 +830,7 @@ def _build_llm_messages(
 
 
 def load_llm() -> ChatOpenAI:
-    groq_api_key = os.getenv("GROQ_API_KEY")
-    if not groq_api_key:
-        raise ValueError("GROQ_API_KEY not found in environment variables")
+    groq_api_key = _resolve_groq_api_key()
     return ChatOpenAI(
         model_name="llama-3.3-70b-versatile",
         temperature=0.4,
@@ -846,9 +856,7 @@ def get_llm() -> ChatOpenAI:
 def get_llm_stream() -> ChatOpenAI:
     global _cached_llm_stream
     if _cached_llm_stream is None:
-        groq_api_key = os.getenv("GROQ_API_KEY")
-        if not groq_api_key:
-            raise ValueError("GROQ_API_KEY not found in environment variables")
+        groq_api_key = _resolve_groq_api_key()
         _cached_llm_stream = ChatOpenAI(
             model_name="llama-3.3-70b-versatile",
             temperature=0.4,
@@ -2413,9 +2421,7 @@ async def _groq_whisper_transcribe(audio_data: bytes, ext: str, lang_hint: Optio
     Passing it improves transcription accuracy and ensures script-correct output.
     """
     import httpx
-    groq_key = os.getenv("GROQ_API_KEY", "").strip()
-    if not groq_key:
-        raise RuntimeError("GROQ_API_KEY not set")
+    groq_key = _resolve_groq_api_key()
 
     content_type = _STT_CONTENT_TYPES.get(ext, "audio/webm")
     files = {"file": (f"audio.{ext}", audio_data, content_type)}
